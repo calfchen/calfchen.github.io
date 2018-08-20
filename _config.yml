@@ -11,11 +11,11 @@ site-twitter: #if your site has a twitter account, enter it here
 # Author Settings
 author: calfchen # add your name
 author-img: calf chen.jpg # add your photo
-about-author: I am a student from tju. # add description
+about-author: I am a student from Tianjin University. # add description
 social-twitter: # add your Twitter handle
 social-facebook: # add your Facebook handle
 social-github: calfchen # add your Github handle
-social-linkedin: # add your Linkedin handle
+social-linkedin: chen xiaolong # add your Linkedin handle
 social-email: calfchen929@gmail.com # add your Email address
 
 # Disqus
