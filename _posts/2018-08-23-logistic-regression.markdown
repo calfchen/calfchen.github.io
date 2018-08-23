@@ -1,10 +1,10 @@
 ---
 layout: post
-title: use the first 
+title: Logistic Regression
 date: 2018-08-21
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: sklearn/logistic_regression/logistic_regressionoutput_example.png # Add image post (optional)
-tags: [Js, Conference] # add tag
+tags: [ML, LR] # add tag
 ---
 # Logistic Regression
 
@@ -21,3 +21,5 @@ tags: [Js, Conference] # add tag
 - BaseEstimator：这个类相当的关键，具体关键到什么程度呢，关键到我要另起一篇文章来单独的介绍。[BaseEstimator]()
 - LinearClassifierMixin：这个类就是实现
 - SparseCoefMixin
+
+![Macbook]({{site.baseurl}}/assets/img/sklearn/logistic_regression/logistic_regressionoutput_example.png)
