@@ -18,8 +18,10 @@ tags: [ML, LR] # add tag
 
 从形式上看，LogisticRegression 继承了三个类：
 
-- BaseEstimator：这个类相当的关键，具体关键到什么程度呢，关键到我要另起一篇文章来单独的介绍。[BaseEstimator]()
+- BaseEstimator：这个类相当的关键，具体关键到什么程度呢，关键到我要另起一篇文章来单独的介绍。[BaseEstimator](https://calfchen.github.io/calfchen.github.io/estimator/)
 - LinearClassifierMixin：这个类就是实现
 - SparseCoefMixin
 
 ![Macbook]({{site.baseurl}}/assets/img/sklearn/logistic_regression/logistic_regressionoutput_example.png)
+
+

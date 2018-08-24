@@ -18,9 +18,9 @@ sklearn library 基于 Numpy 和 Scipy libraries。
 
 ## 2 Core API
 
-sklearn 使用基本的三大接口：① estimator：building and fitting models；② predictor：makeing predictions；③ transformer：converting data。
+sklearn 使用基本的三大接口：① <font color="#dd0000">estimator</font>：building and fitting models；② <font color="#dd0000">predictor</font>：makeing predictions；③ <font color="#dd0000">transformer</font>：converting data。
 
-<font color="#dd0000">**General principles**</font><br />
+** General principles **
 
 - Consistency:
 - Inspection:
@@ -28,7 +28,7 @@ sklearn 使用基本的三大接口：① estimator：building and fitting model
 - Composition:
 - Sensible defaults:
 
-<font color="#dd0000">**Data representation**</font><br />
+** Data representation **
 
 
 
@@ -38,6 +38,10 @@ sklearn 使用基本的三大接口：① estimator：building and fitting model
 
 
 
+## 参考
+
+- [API design for machine learning software: experiences from the scikit-learn project](https://github.com/calfchen/calfchen.github.io/blob/master/paper/1309.0238v1.pdf)
+- []()
 
 
 
