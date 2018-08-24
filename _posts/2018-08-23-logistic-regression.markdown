@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logistic Regression
-date: 2018-08-21
+date: 2018-08-23
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: sklearn/logistic_regression/logistic_regressionoutput_example.png # Add image post (optional)
 tags: [ML, LR] # add tag

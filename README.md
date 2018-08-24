@@ -1,6 +1,11 @@
 # calfchen's blog
 
+[home page](https://calfchen.github.io/)
+
 The first part: Sklearn Library Source Code Analysis
+
+- [Estimator](https://calfchen.github.io/calfchen.github.io/estimator/)
+- [Logistic Regression](https://calfchen.github.io/calfchen.github.io/logistic-regression/)
 
 ## License
 
