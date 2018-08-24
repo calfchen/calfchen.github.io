@@ -20,7 +20,7 @@ sklearn library 基于 Numpy 和 Scipy libraries。
 
 sklearn 使用基本的三大接口：① <font color="#dd0000">estimator</font>：building and fitting models；② <font color="#dd0000">predictor</font>：makeing predictions；③ <font color="#dd0000">transformer</font>：converting data。
 
-** General principles **
+__General principles__
 
 - Consistency:
 - Inspection:
@@ -28,7 +28,11 @@ sklearn 使用基本的三大接口：① <font color="#dd0000">estimator</font>
 - Composition:
 - Sensible defaults:
 
-** Data representation **
+__Data representation__
+
+matrix representation: numpy 的 narrays 和 scipy 
+
+datasets are encoded as NumPy multidimensional arrays for dense data and as SciPy sparse matrices for sparse data. 
 
 
 
