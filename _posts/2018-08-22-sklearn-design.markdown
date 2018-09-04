@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Estimator
+title: Sklearn Design
 date: 2018-08-22
 description: You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. # Add post description (optional)
 img: # Add image post (optional)
@@ -105,7 +105,49 @@ __<font color="#dd0000">1） Pipeline objects：</font>__
 __<font color="#dd0000">2） FeatureUnion objects：</font>__：
 
 - parallel fashion
-- 
+- FeatureUnion 将多个 transformers 作为输入，再调用 fit 方法时，相当于对每个 transformers 单独的处理，然后将结果合并在一起。
+- Pipeline and FeatureUnion 可以一起使用，从而形成复杂的 workflows。
+
+例如，linear PCA and kernel PCA features on X train：
+
+    from sklearn.pipeline import FeatureUnion, Pipeline
+    from sklearn.decomposition import PCA, KernelPCA
+    from sklearn.feature_selection import SelectKBest
+    union = FeatureUnion([(”pca”, PCA()),
+                        (”kpca”, KernelPCA(kernel=”rbf”))])
+    Pipeline([(”feat_union”, union),
+            (”feat_sel”, SelectKBest(k=10)) ,
+            (”log_reg”, LogisticRegression(penalty=”l2”))
+            ]).fit(X_train, y_train).predict(X_test)
+
+### 3.3 Model selection
+
+主要支持两种不同的 meta-estimators：① GridSearchCV，② RandomizedSearchCV。他们将输入作为 estimator，去搜索 hyper-parameters。
+
+- GridSearchCV ：主要通过设置 grid 来搜索最佳的 parameters。
+- RandomizedSearchCV：减少搜索的次数。
+- model selection algorithms 通过交叉验证的方式来确定最优的参数 k-fold。这个 score function 使用 estimator 的 score method。
+- 搜索的最好的参数，可以通过 public attribute best_estimator_ 来获取。
+
+使用例子：
+
+    from sklearn.grid_search import GridSearchCV
+    from sklearn.svm import SVC
+    param grid = [
+                {”kernel” : [”linear”] , ”C” : [1, 10, 100, 1000]},
+                {”kernel” : [”rbf”], ”C” : [1, 10, 100, 1000],
+                ”gamma” : [0.001, 0.0001]}
+                ]
+    clf = GridSearchCV(SVC(), param_grid, scoring=”f1” ,cv=10)
+    clf.fit(X_train, y_train)
+    y_pred = clf.predict(X_test)
+
+### 3.4 Extending scikit-learn
+
+
+
+
+
 
 
 
